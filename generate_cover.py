@@ -1,0 +1,193 @@
+svg_content = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8f1e5" />
+      <stop offset="12%" stop-color="#f3ebd9" />
+      <stop offset="25%" stop-color="#e8f3dc" />
+      <stop offset="60%" stop-color="#cbe6b3" />
+      <stop offset="100%" stop-color="#8ebd6b" />
+    </linearGradient>
+    <linearGradient id="sunGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff9e6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#fed7aa" stop-opacity="0" />
+    </linearGradient>
+    <filter id="softPencil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+
+  <!-- Cream Parchment Border -->
+  <rect x="0" y="0" width="600" height="900" fill="#f6eedf" />
+
+  <!-- Inner Illustration Area -->
+  <g transform="translate(24, 24)">
+    <rect x="0" y="0" width="552" height="852" rx="4" fill="url(#bgGrad)" stroke="#eeddc3" stroke-width="2" />
+    
+    <!-- Background Trees & Sunlight -->
+    <circle cx="120" cy="180" r="140" fill="#b9dc9e" opacity="0.45" />
+    <circle cx="280" cy="150" r="120" fill="#c7e4af" opacity="0.4" />
+    <circle cx="440" cy="170" r="150" fill="#b5dba0" opacity="0.45" />
+    
+    <!-- Tree Trunks -->
+    <path d="M120 180 L125 360 L145 360 L140 180 Z" fill="#b38766" opacity="0.4" />
+    <path d="M420 170 L415 360 L435 360 L440 170 Z" fill="#b38766" opacity="0.4" />
+
+    <!-- TITLES in Dark Forest Green Serif -->
+    <text x="276" y="115" font-family="'Playfair Display', Georgia, serif" font-size="46" font-weight="900" fill="#1b431e" text-anchor="middle" letter-spacing="3">AİLE DEDİĞİN</text>
+    <text x="276" y="160" font-family="'Playfair Display', Georgia, serif" font-size="25" font-weight="bold" fill="#2d5731" text-anchor="middle" letter-spacing="1">Aynı Çatı Altında</text>
+    <text x="276" y="195" font-family="'Playfair Display', Georgia, serif" font-size="25" font-weight="bold" fill="#2d5731" text-anchor="middle" letter-spacing="1">Buluşan Hikayeler</text>
+
+    <!-- Butterfly Fluttering in Center -->
+    <g transform="translate(276, 310) scale(1.3)">
+      <path d="M0,0 C-16,-22 -32,-8 -8,6 C-24,18 -16,28 0,10 C16,28 24,18 8,6 C32,-8 16,-22 0,0 Z" fill="#d97706" stroke="#92400e" stroke-width="1.5" />
+      <path d="M-8,-4 C-14,-12 -22,-6 -10,0 Z" fill="#fbbf24" />
+      <path d="M8,-4 C14,-12 22,-6 10,0 Z" fill="#fbbf24" />
+      <path d="M0,-5 L0,12" stroke="#78350f" stroke-width="2.5" stroke-linecap="round" />
+      <circle cx="-3" cy="-7" r="1.5" fill="#78350f" />
+      <circle cx="3" cy="-7" r="1.5" fill="#78350f" />
+    </g>
+
+    <!-- FATHER (Right) - Soft yellow shirt, resting on elbow smiling -->
+    <g transform="translate(320, 260)">
+      <!-- Right arm under head -->
+      <path d="M100 80 C130 55 140 25 110 15 C85 5 75 40 70 65" stroke="#f6c49c" stroke-width="18" stroke-linecap="round" fill="none" />
+      <!-- Head & Neck -->
+      <path d="M60 45 L65 75 L45 75 Z" fill="#f6c49c" />
+      <ellipse cx="62" cy="35" rx="28" ry="34" fill="#f6c49c" stroke="#e09f6e" stroke-width="1.5" />
+      <!-- Dark silver/grey styled hair -->
+      <path d="M36 30 C32 10 52 2 76 6 C92 10 96 25 90 40 C80 32 60 30 45 32 Z" fill="#4b5563" />
+      <!-- Eyebrows, Eyes, Nose, Smile -->
+      <path d="M48 28 Q56 26 62 28" stroke="#374151" stroke-width="2" fill="none" />
+      <path d="M72 28 Q80 26 86 28" stroke="#374151" stroke-width="2" fill="none" />
+      <circle cx="56" cy="34" r="3" fill="#1f2937" />
+      <circle cx="78" cy="34" r="3" fill="#1f2937" />
+      <path d="M68 34 L70 44 L64 47" stroke="#b45309" stroke-width="1.8" fill="none" />
+      <path d="M52 54 Q68 64 80 54" stroke="#92400e" stroke-width="2.5" stroke-linecap="round" fill="none" />
+      <!-- Yellow Shirt Body -->
+      <path d="M30 75 C10 100 5 150 35 180 C60 190 140 180 150 130 C150 95 120 70 85 70 Z" fill="#fbbf24" stroke="#d97706" stroke-width="2" />
+      <!-- Creases & Texture on Yellow Shirt -->
+      <path d="M50 110 Q70 125 100 115" stroke="#d97706" stroke-width="1.5" fill="none" opacity="0.6" />
+      <path d="M40 140 Q75 155 120 145" stroke="#d97706" stroke-width="1.5" fill="none" opacity="0.6" />
+      <!-- Blue Pants Section -->
+      <path d="M35 180 L20 270 L80 270 L95 180 Z" fill="#3b82f6" stroke="#1d4ed8" stroke-width="2" />
+    </g>
+
+    <!-- MOTHER (Left) - Wavy auburn hair, periwinkle dress, reading book -->
+    <g transform="translate(10, 310)">
+      <!-- Long wavy auburn hair (back layer) -->
+      <path d="M80 30 C45 20 20 60 30 130 C35 170 65 180 75 165 C55 115 65 60 90 40 Z" fill="#b45309" />
+      <path d="M120 30 C150 20 170 65 160 135 C155 170 130 180 120 165 C140 120 130 60 110 40 Z" fill="#b45309" />
+      <!-- Head & Neck -->
+      <path d="M95 55 L95 85 L108 85 L108 55 Z" fill="#fcd3b8" />
+      <ellipse cx="102" cy="48" rx="26" ry="32" fill="#fcd3b8" stroke="#e09f6e" stroke-width="1.5" />
+      <!-- Front Hair Curls -->
+      <path d="M78 35 C70 15 95 8 115 12 C130 15 135 30 130 48 C120 35 105 32 90 35 Z" fill="#9a3412" />
+      <!-- Mother's Features -->
+      <circle cx="92" cy="45" r="2.8" fill="#431407" />
+      <circle cx="114" cy="45" r="2.8" fill="#431407" />
+      <path d="M88 58 Q103 68 118 58" stroke="#9a3412" stroke-width="2.2" stroke-linecap="round" fill="none" />
+      <!-- Earring -->
+      <circle cx="76" cy="52" r="3" fill="#f59e0b" />
+      <!-- Periwinkle Blue Summer Dress -->
+      <path d="M70 85 C45 120 20 200 45 240 C80 260 150 250 175 220 C185 180 150 110 125 85 Z" fill="#6366f1" stroke="#4338ca" stroke-width="2" />
+      <path d="M45 240 C70 270 150 270 180 230 L160 330 L30 330 Z" fill="#4f46e5" opacity="0.85" />
+      <!-- Arms & Hands holding book -->
+      <path d="M65 105 C55 130 65 170 85 180" stroke="#fcd3b8" stroke-width="12" stroke-linecap="round" fill="none" />
+      <path d="M130 105 C140 130 130 170 115 180" stroke="#fcd3b8" stroke-width="12" stroke-linecap="round" fill="none" />
+      <!-- Open Orange Book -->
+      <g transform="translate(75, 155)">
+        <path d="M0 12 Q25 4 45 16 Q65 4 90 12 L85 55 Q65 45 45 60 Q25 45 5 55 Z" fill="#ea580c" stroke="#9a3412" stroke-width="2" />
+        <path d="M6 14 Q25 6 45 18 L45 58 Q25 47 7 53 Z" fill="#fff7ed" />
+        <path d="M45 18 Q65 6 84 14 L83 53 Q65 47 45 58 Z" fill="#fff7ed" />
+        <line x1="45" y1="18" x2="45" y2="58" stroke="#c2410c" stroke-width="2" />
+      </g>
+    </g>
+
+    <!-- BOY (Center) - Lying back on grass, hands behind head, coral red shirt -->
+    <g transform="translate(170, 390)">
+      <!-- Arms behind head -->
+      <path d="M30 45 C0 20 15 -10 50 0" stroke="#fcd3b8" stroke-width="14" stroke-linecap="round" fill="none" />
+      <path d="M70 45 C100 20 85 -10 50 0" stroke="#fcd3b8" stroke-width="14" stroke-linecap="round" fill="none" />
+      <!-- Head -->
+      <circle cx="50" cy="30" r="25" fill="#fcd3b8" stroke="#e09f6e" stroke-width="1.5" />
+      <!-- Blond boyish hair -->
+      <path d="M26 25 C25 8 40 2 62 2 C75 5 78 16 75 28 C66 18 45 18 26 25 Z" fill="#f59e0b" />
+      <!-- Grinning Boy Face -->
+      <circle cx="42" cy="28" r="2.8" fill="#431407" />
+      <circle cx="58" cy="28" r="2.8" fill="#431407" />
+      <path d="M38 38 Q50 48 62 38" stroke="#9a3412" stroke-width="2.5" stroke-linecap="round" fill="none" />
+      <!-- Coral Red T-shirt -->
+      <path d="M20 52 C5 75 10 120 25 130 C45 135 75 135 88 125 C98 105 88 70 75 52 Z" fill="#ef4444" stroke="#b91c1c" stroke-width="2" />
+      <!-- Blue Shorts -->
+      <path d="M25 130 L15 190 L50 190 L53 145 L57 190 L90 190 L85 125 Z" fill="#2563eb" stroke="#1d4ed8" stroke-width="2" />
+      <!-- Legs & Socks -->
+      <path d="M25 190 L30 250" stroke="#fcd3b8" stroke-width="12" stroke-linecap="round" />
+      <path d="M75 190 L80 250" stroke="#fcd3b8" stroke-width="12" stroke-linecap="round" />
+      <!-- Shoes / Sneakers -->
+      <ellipse cx="32" cy="256" rx="14" ry="9" fill="#78350f" stroke="#451a03" stroke-width="1.5" />
+      <ellipse cx="84" cy="256" rx="14" ry="9" fill="#78350f" stroke="#451a03" stroke-width="1.5" />
+    </g>
+
+    <!-- FOREGROUND WILDFLOWERS (Vibrant Pinks, Violets, Buttercups) -->
+    <!-- Flower 1: Pink Daisy Left -->
+    <g transform="translate(180, 770)">
+      <circle cx="0" cy="0" r="7" fill="#fbbf24" stroke="#d97706" stroke-width="1" />
+      <circle cx="-13" cy="0" r="6" fill="#f43f5e" />
+      <circle cx="13" cy="0" r="6" fill="#f43f5e" />
+      <circle cx="0" cy="-13" r="6" fill="#f43f5e" />
+      <circle cx="0" cy="13" r="6" fill="#f43f5e" />
+      <circle cx="-9" cy="-9" r="5" fill="#f43f5e" />
+      <circle cx="9" cy="-9" r="5" fill="#f43f5e" />
+      <circle cx="-9" cy="9" r="5" fill="#f43f5e" />
+      <circle cx="9" cy="9" r="5" fill="#f43f5e" />
+    </g>
+    <!-- Flower 2: Deep Red Rose Daisy -->
+    <g transform="translate(260, 785)">
+      <circle cx="0" cy="0" r="8" fill="#fbbf24" stroke="#b45309" stroke-width="1" />
+      <circle cx="-14" cy="0" r="6.5" fill="#e11d48" />
+      <circle cx="14" cy="0" r="6.5" fill="#e11d48" />
+      <circle cx="0" cy="-14" r="6.5" fill="#e11d48" />
+      <circle cx="0" cy="14" r="6.5" fill="#e11d48" />
+      <circle cx="-10" cy="-10" r="6" fill="#e11d48" />
+      <circle cx="10" cy="-10" r="6" fill="#e11d48" />
+      <circle cx="-10" cy="10" r="6" fill="#e11d48" />
+      <circle cx="10" cy="10" r="6" fill="#e11d48" />
+    </g>
+    <!-- Flower 3: Purple Violet Right -->
+    <g transform="translate(380, 745)">
+      <circle cx="0" cy="0" r="7.5" fill="#fbbf24" stroke="#78350f" stroke-width="1" />
+      <circle cx="-13" cy="0" r="6" fill="#7c3aed" />
+      <circle cx="13" cy="0" r="6" fill="#7c3aed" />
+      <circle cx="0" cy="-13" r="6" fill="#7c3aed" />
+      <circle cx="0" cy="13" r="6" fill="#7c3aed" />
+      <circle cx="-9" cy="-9" r="5" fill="#8b5cf6" />
+      <circle cx="9" cy="-9" r="5" fill="#8b5cf6" />
+      <circle cx="-9" cy="9" r="5" fill="#8b5cf6" />
+      <circle cx="9" cy="9" r="5" fill="#8b5cf6" />
+    </g>
+    <!-- Flower 4: Lavender Violet Far Right -->
+    <g transform="translate(460, 780)">
+      <circle cx="0" cy="0" r="6.5" fill="#f59e0b" stroke="#92400e" stroke-width="1" />
+      <circle cx="-12" cy="0" r="5.5" fill="#9333ea" />
+      <circle cx="12" cy="0" r="5.5" fill="#9333ea" />
+      <circle cx="0" cy="-12" r="5.5" fill="#9333ea" />
+      <circle cx="0" cy="12" r="5.5" fill="#9333ea" />
+      <circle cx="-8" cy="-8" r="5" fill="#a855f7" />
+      <circle cx="8" cy="-8" r="5" fill="#a855f7" />
+      <circle cx="-8" cy="8" r="5" fill="#a855f7" />
+      <circle cx="8" cy="8" r="5" fill="#a855f7" />
+    </g>
+
+    <!-- Foreground Grass Tufts -->
+    <path d="M60 820 Q70 780 80 820 Q90 770 100 820" stroke="#4ade80" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M300 825 Q310 790 320 825 Q330 785 340 825" stroke="#4ade80" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M500 815 Q510 775 520 815 Q530 770 540 815" stroke="#4ade80" stroke-width="3" stroke-linecap="round" fill="none" />
+
+  </g>
+</svg>'''
+
+with open('cover.svg', 'w') as f:
+    f.write(svg_content)
+
+print("Created cover.svg")
